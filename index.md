@@ -1,37 +1,36 @@
-## Welcome to GitHub Pages
+### bmp2txt
+transfer the 24-bit .bmp image to the ascii image
 
-You can use the [editor on GitHub](https://github.com/xpsair/bmp2txt/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+本汇编程序是将24Bit位图图像转换成文本图画
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+- 运行环境为： 32位 windows + masm 6.0
+- windows 7 的 cmd.exe 如果不能运行本程序，可以用 DOSBOX 来运行本程序；
+- 运行本程序时，需要将要转换的 24bit .bmp格式位图图片放置在 masm 6.0 的文件夹里；
+- 图片名字不能含有中文和空格；
+- 输出字符图画文件在本目录下；
+- 例如，将名为 24-lena.bmp 的24bit .bmp格式图片转换为字符图画：
+ ```
+ 1、 运行命令行；
+ 2、 T5.EXE；
+ 3、 bmp2txt 24-lena.bmp d.txt
 ```
+这个程序虽然写地很粗糙，重要的地方都标了注释，有一定汇编基础的应该没什么太多问题吧……就这么多，欢迎拍砖 ^_^
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+- 说明：
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/xpsair/bmp2txt/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+  - 程序代码文件为 T5.ASM；
+  - 24-lena.bmp，subway.bmp图片均为测试图片；
+  - 其它文件为.ASM文件编译、调试时使用；
+  - 本程序仅供转换 .BMP 格式的图片，其它格式图片不支持；
+  - 须将要转换的图片移至本目录下才可成功转换，转换成功后的文本文件生成于本目录内；
+```
+XXXXXX        XXXXXX          PPPPPPPPPPPPPPPPPPPP
+ XXXXXX      XXXXXX          PPPPPPPPPPPPPPPPPPPP
+  XXXXXX    XXXXXX          PPPPPP        PPPPPP
+   XXXXXX  XXXXXX          PPPPPP        PPPPPP
+    XXXXXXXXXXXX          PPPPPPPPPPPPPPPPPPPP
+   XXXXXX  XXXXXX        PPPPPP
+  XXXXXX    XXXXXX      PPPPPP
+ XXXXXX      XXXXXX    PPPPPP
+XXXXXX        XXXXXX  PPPPPP               CS1004
+```
