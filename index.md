@@ -1,6 +1,6 @@
 ### bmp2txt
 
-github.com/xpsair/bmp2txt
+https://xpsair.github.io/bmp2txt/
 
 transfer the 24-bit .bmp image to the ascii image
 
